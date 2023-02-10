@@ -1,0 +1,44 @@
+\documentclass[12pt]{article}
+\usepackage[paper=letterpaper,margin=2cm]{geometry}
+
+\title{CASSSC volume}
+\author{Aiden Rosenberg}
+\date{January 2023}
+\usepackage{mathtools, amssymb, amsthm}
+
+\begin{document}
+
+
+\maketitle
+
+\section{Given Dimensions}
+Cargo Accommodation in Standard Space Shipping Container (CASSSC)\footnote{As defined by Aerospace Education Competitions} units are $30$ feet  long with nearly- square $15-$foot cross-sections(corners of the cross-section are rounded with a $1-$foot radius).
+\section{Bounding box}
+Given that the area single cross-section of a CASSSC is less than a square bounding box (i.e without rounded edges) therefore $A_{\text{CASSSC}} < A_{\text{box}}$ (use to check calculations for area). The height and of the box $(a)$ can be determine via the application of the Pythagoras theorem as seen below:
+$$ 15^2 = 2a^2 \Longrightarrow a= \frac{15\sqrt{2}}{2}$$
+$$A_{\text{box}} = a^2 = 112.5 \text{ft.}$$
+\section{Corners}
+The summation of the area of the CASSSC cross-sectional corners is equal to that of a single circle with $r = 1\text{ft}$ let this area be denoted by $\alpha$.
+$$\alpha = \pi \cdot r^2 = \pi$$
+\section{Internal Area}
+The height of the bounding box is equal  to that of the vertical height and width of the cross-sectional height and width of the CASSSC. Let $b$ denote the distance between the radius of each corner.  
+$$b= \underbrace{a}_{\text{total width}} - \underbrace{2}_{\text{width of the corners}} = \frac{15\sqrt{2}}{2} - 2$$
+Enclosing the area defined by the corners radius, creates a square with side length $b$. Let this area be denoted by $\beta$.
+$$\beta = b^2 = \frac{233}{2}-30\sqrt{2} \approx 74.07359 \text{ ft}^2$$
+\section{Sides}
+Comprising the remainder of the CASSSC cross-sectional area denoted by $\gamma$ are four rectangles with width of 1ft and height of $b$.
+$$\gamma = 4 \times \underbrace{b}_{\text{area of a rectangle}} = 30\sqrt{2}-8 \approx 34.4264 \text{ ft}^2$$
+\section{Total Area}
+The total area of a CASSSC cross section is equal to the following:
+$$A_{\text{cross}} = \alpha + \beta +\gamma = b^2+ \pi + 4b = \pi + \frac{217}{2} \approx 111.64159 \text{ ft}^2$$
+Comparing this derivation with the equality $A_{\text{CASSSC}} < A_{\text{box}}$ this calculation is evaluated as accurate. 
+\section{Total volume} 
+The total volume of a CASSSC is defined as:
+$$V_{\text{CASSSC}} = A_{\text{cross}} \cdot l $$
+Given that $l = 30$ ft
+$$V_{\text{CASSSC}} = 30\pi + 3255 \approx \boxed{3349.24777961 \text{ ft}^3} = \boxed{94.8401356315 \text{ m}^3}$$
+Comparing $V_{\text{CASSSC}}$ to a bounding cuboid with cross-sectional area $A_{\text{box}}$ the following equality is true $V_{box}> V_{\text{CASSSC}}$. Evaluating this derivation is true.  
+
+
+
+\end{document}
